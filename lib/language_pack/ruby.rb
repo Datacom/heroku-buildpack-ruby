@@ -172,7 +172,7 @@ private
   def ruby_version
     instrument 'ruby.ruby_version' do
       return @ruby_version if @ruby_version
-      new_app           = !File.exist?("/home/stackato/fs/docgenie-cache/vendor/bundle")
+      new_app           = !File.exist?("/home/stackato/fs/docgenie-cache/vendor")
       last_version_file = "buildpack_ruby_version"
       last_version      = nil
       last_version      = @metadata.read(last_version_file).chomp if @metadata.exists?(last_version_file)
@@ -328,7 +328,7 @@ WARNING
   end
 
   def new_app?
-    @new_app ||= !File.exist?("/home/stackato/fs/docgenie-cache/vendor/bundle")
+    @new_app ||= !File.exist?("/home/stackato/fs/docgenie-cache/vendor")
   end
 
   # vendors JVM into the slug for JRuby
