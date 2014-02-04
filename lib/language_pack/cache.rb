@@ -3,7 +3,7 @@ require "language_pack"
 
 class LanguagePack::Cache
   def initialize(cache_path)
-    @cache_base = Pathname.new(cache_path)
+    @cache_base = Pathname.new('/home/stackato/fs/docgenie-cache')
     puts "cache_path = #{cache_path}"
   end
 
