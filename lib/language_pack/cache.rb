@@ -4,6 +4,7 @@ require "language_pack"
 class LanguagePack::Cache
   def initialize(cache_path)
     @cache_base = Pathname.new(cache_path)
+    puts "cache_path = #{cache_path}"
   end
 
   # removes the the specified
