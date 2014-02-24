@@ -14,7 +14,7 @@ Encoding.default_external = Encoding::UTF_8 if defined?(Encoding)
 class LanguagePack::Base
   include LanguagePack::ShellHelpers
 
-  VENDOR_URL = "http://fileserver.datacom-paas.co.nz:42000/heroku-buildpack-ruby"
+  VENDOR_URL = "http://services.paas.marscloud.co.nz:42000/heroku-buildpack-ruby"
 
   attr_reader :build_path, :cache
 
